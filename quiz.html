@@ -8,24 +8,27 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="./quiz_image/quiz_logo.png" alt="logo" class="logo"></a>
+        <a href="home.html"><img src="./quiz_image/logo.png" alt="logo" class="logo"></a>
     </header>
 
-    <div class="quiz-container">
+    <section class="quiz-container">
+        <!-- <div class="sction_num_scr">
+            <p id="num_question">0/3</p>
+            
+        </div>  -->
         <div id="scores">
             Score: <span id="score">0</span>
-        </div> 
+        </div>
         <h1>Quiz Question</h1>
         <div id="question-container">
             <h2 id="question"></h2>
             <div id="options">
-
-
             </div>
         </div>
-        <button class="button__style" id="submit-answer-btn">your answer</button>
+        <button class="button__style" id="submit-answer-btn">Show the answer</button>
         <button class="button__style" id="next-question-btn" style="display: none;">Next</button>
-    </div>
+        <hr>
+    </section>
 
     <script src="script.js"></script>
 </body>

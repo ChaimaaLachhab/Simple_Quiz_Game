@@ -32,7 +32,6 @@ function displayQuestion() {
     c_Question.options.forEach(i_option => {
         const i_button = document.createElement("button");
         i_button.textContent = i_option;
-
         i_button.addEventListener("click", () => {
             checkAnswer(i_option);
         });
