@@ -18,115 +18,125 @@ body {
     background-repeat: no-repeat;
 }
 
+/* HOME PAGE */
+
 .logo {
     width: 9%;
     padding: 1%;
-    padding-right: 0;
 }
 
-.home__home {
+.home__container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
-.home__home img {
+.home__container img {
     width: 35%;
 }
 
-.home__home a {
+.home__container a {
     font-size: 1.3rem;
     color: white;
     font-weight: 600;
     padding: .5% 1.5%;
-    width: auto;
+    min-width: 10%;
     text-align: center;
-    background-color: #ECD74E;
+    background-color: #F8BD0F;
     border-radius: 200px;
-    text-decoration: none;
     margin-top: 1%;
 }
 
-.home__home a:hover {
-    color: #ECD74E;
+.home__container a:hover {
+    color: #F8BD0F;
     background-color: white;
 }
 
-/* ::::::::::::::::::::::::::::::::: */
+/* RULES PAGE */
 
-.index__home {
+.rules__container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+    gap: 10px;
     border-radius: 20px;
     background-color: rgba(255, 252, 252, 0.6);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    padding: 2%;
+    width: 70%;
 }
 
-.index__home img {
-    width: 48%;
+.rules__container .centenu__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%;
+    margin: 2% 10%;
 }
 
-.index__home .play__home {
+.rules__container .centenu__container img {
+    width: 60%;
+}
+
+.rules__container .centenu__container .rule__line {
     display: flex;
     flex-direction: column;
     text-align: start;
-    width: 32%;
 }
 
-.index__home .play__home h2 {
+.rules__container .centenu__container .rule__line h2 {
     font-size: 1.5rem;
     color: #2D7ABC;
-    background-color: white;
+    text-shadow: 0 1px 5px rgba(255, 255, 255, 0.5);
     border-radius: 200px;
-    padding: 2% 5%;
     font-weight: bolder;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
+    width: max-content;
 }
 
-.index__home .play__home .header__nav ul li {
-    padding: 5px 10px;
-    margin: 1%;
-}
-
-.index__home .play__home .header__nav ul li a {
+.rules__container .centenu__container .rule__line ul li {
+    padding: 2%;
     color: black;
+    font-size: .8rem;
     font-weight: 600;
+    width: max-content;
 }
 
-.index__home .play__home .header__nav ul li:hover {
-    background-color: #ECD74E;
+.rules__container .centenu__container .rule__line ul li:hover {
+    background-color: #F8BD0F;
     border-radius: 5px;
 }
 
-/* .index__home .goback_home{
-    font-size: 1.3rem;
+.rules__container .quite{
+    font-size: 1.2rem;
     color: white;
     font-weight: 600;
-    padding: 1% 1.5%;
+    padding: .5% 1.5%;
     text-align: center;
-    background-color: #ECD74E;
+    background-color: #ec4e4e;
     border-radius: 200px;
-    text-decoration: none;
-    margin-top: 2%;
 }
 
-.index__home .goback_home:hover{
-    color: #ECD74E;
+.rules__container .quite:hover{
+    color: #ec4e4e;
     background-color: white;
-} */
+}
 
-/* ::::::::::::::::::::: */
+/* QUIZE PAGE */
 
 .quiz-container {
-    font-size: 1.1rem;
-    color: white;
-    margin: 4% auto;
-    padding: 15px 40px;
+    font-size: 1.2rem;
+    color: black;
+    margin: 0 auto;
+    padding: 2%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -136,36 +146,32 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
 }
 
-#scores {
+.quiz-container #scores {
     font-size: 1.1rem;
     color: white;
     font-weight: 500;
-    padding: .7% 2%;
-    background-color: #ECD74E;
+    padding: .5% 1.5%;
+    background-color: #F8BD0F;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
     border-radius: 25px;
     align-self: flex-end;
 }
 
-#question {
+.quiz-container #question {
+    font-size: 1.1rem;
     margin: 2%;
     text-align: center;
 }
 
-#options {
+.quiz-container #options {
     display: flex;
     flex-direction: column;
-    min-width: 500px;
+    min-width: 1000px;
 }
 
-.button__style {
-    color: white;
-    background-color: #2D7ABC;
-}
-
-button {
+.quiz-container button {
     padding: 10px 20px;
     background-color: white;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
@@ -173,69 +179,109 @@ button {
     border: 0.01rem solid black;
     border-radius: 5px;
     cursor: pointer;
-    margin: 2%;
+    margin: 1.5%;
     min-width: 200px;
 }
 
-button:hover {
-    border: 0.1rem solid black;
+.quiz-container button:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 3);
 }
 
-button.correct {
+.quiz-container .button__style {
     color: white;
-    background-color: #64ff65;
-    border: none;
+    background-color: #2D7ABC;
 }
 
-button.incorrect {
+.quiz-container button.correct {
     color: white;
-    background-color: #ff6868;
-    border: none;
+    background-color: #4CAF4F;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 468px) {
+.quiz-container button.incorrect {
+    color: white;
+    background-color: #E53835;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 480px) {
     .logo {
         width: 15%;
     }
 
-    .home__home img {
-        width: 70%;
-        margin-top: 20%;
+    /* HOME PAGE */
+
+    .home__container img {
+        width: 80%;
+        margin: 5%;
     }
 
-    .home__home a {
+    .home__container a {
         font-size: 2rem;
-        font-weight: 400;
-        padding: .1% 4%;
-        margin-top: 15%;
+        padding: .5% 1.5%;
+        margin-top: 5%;
+        min-width: 22%;
     }
 
-    /* ::::::::::::::::::::: */
+    /* RULES PAGE */
+
+    .rules__container {
+        gap: 10px;
+        width: 80%;
+    }
+
+    .rules__container .centenu__container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .rules__container .centenu__container img {
+        width: 70%;
+        margin: 10%;
+    }
+    
+    .rules__container .centenu__container .rule__line h2 {
+        font-size: 2.3rem;
+        font-weight: bolder;
+    }
+    
+    .rules__container .centenu__container .rule__line ul li {
+        font-size: 1.2rem;
+        padding: 2%;
+        font-weight: 500;
+        width: max-content;
+    }
+    
+    .rules__container .quite{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 3%;
+    }
+
+    /* QUIZE PAGE */
 
     .quiz-container{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .quiz-container h2 {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
-    #scores {
+    .quiz-container #scores {
         font-size: 1rem;
         font-weight: 500;
-        padding: .7% 2%;
+        padding: .5% 1.5%;
     }
 
-    #question {
+    .quiz-container #question {
         margin: 2%;
     }
 
-    #options {
+    .quiz-container #options {
         font-size: .9rem;
-        min-width: 500px;
+        min-width: 800px;
     }
 
-    button {
+    .quiz-container button {
         font-size: 1.1rem;
         padding: 10px 20px;
         min-width: 200px;
@@ -247,47 +293,80 @@ button.incorrect {
         width: 20%;
     }
 
-    .home__home img {
+    /* HOME PAGE */
+
+    .home__container img {
         width: 80%;
-        margin-top: 30%;
     }
 
-    .home__home a {
-        font-size: 1.5rem;
-        font-weight: 400;
-        padding: .1% 4%;
-        margin-top: 20%;
+    .home__container a {
+        font-size: 1rem;
+        font-weight: 00;
+        padding: 1% 3%;
+        margin-top: 5%;
     }
 
-    /* ::::::::::::::::::::: */
+    /* RULES PAGE */
+
+    .rules__container {
+        gap: 5px;
+        width: 90%;
+        padding: 2%;
+    }
+
+    .rules__container .centenu__container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .rules__container .centenu__container img {
+        width: 95%;
+        margin: 10%;
+    }
+
+    .rules__container .centenu__container .rule__line h2 {
+        font-size: 1.1rem;
+        font-weight: bolder;
+        margin-bottom: 3%;
+    }
+    
+    .rules__container .centenu__container .rule__line ul li {
+        padding: 2%;
+        font-size: .7rem;
+        font-weight: 500;
+        width: max-content;
+    }
+    
+    .rules__container .quite{
+        margin: 5%;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /* QUIZE PAGE */
 
     .quiz-container{
-        font-size: .8rem;
+        font-size: 1rem;
     }
 
-    .quiz-container h2 {
+    .quiz-container #scores {
         font-size: .9rem;
-
-    }
-
-    #scores {
-        font-size: .8rem;
         font-weight: 500;
-        padding: .7% 2%;
+        padding: .5% 1.5%;
     }
 
-    #question {
+    .quiz-container #question {
+        font-size: .8rem;
         margin: 2%;
     }
 
-    #options {
-        font-size: .9rem;
-        min-width: 200px;
+    .quiz-container #options {
+        min-width: 340px;
     }
 
-    button {
-        font-size: .6rem;
+    .quiz-container button {
+        font-size: .8rem;
         padding: 10px 20px;
-        min-width: 100px;
+        min-width:125px;
     }
 }
